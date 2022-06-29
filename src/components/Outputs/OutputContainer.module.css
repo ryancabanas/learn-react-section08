@@ -8,10 +8,14 @@
   border-radius: 5px;
   padding-left: 10px;
   padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
+  padding-bottom: 1px;
+  padding-right: 18px;
 }
 
 .OutputContainer.hidden {
   display: none;
+}
+
+ul #override {
+  margin-bottom: 0px;
 }

@@ -8,7 +8,7 @@ const OutputContainer = props => {
         !props.recordCount && styles.hidden
       }`}
     >
-      <ul>
+      <ul id={styles.override}>
         {props.records.map(record => {
           return (
             <Record
