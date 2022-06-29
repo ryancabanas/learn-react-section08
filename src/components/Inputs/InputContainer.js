@@ -16,7 +16,13 @@ const InputContainer = props => {
   const submitHandler = event => {
     event.preventDefault();
 
-    if (username && age) {
+    if (!username || !age) {
+      props.onShowModal(
+        'Please enter a valid name and age (non-empty values).'
+      );
+    } else if (parseInt(age) <= 0) {
+      props.onShowModal('Pleaes enter a valid age (>0).');
+    } else {
       const savedData = {
         username: username,
         age: age
@@ -35,6 +41,8 @@ const InputContainer = props => {
       <input value={username} onChange={usernameHandler} />
       <label className={styles.label}>Age (Years)</label>
       <input value={age} onChange={ageHandler} />
+      <br />
+      <br />
       <button type='submit'>Add User</button>
     </form>
   );
