@@ -4,12 +4,16 @@ import InputContainer from './components/Inputs/InputContainer';
 import OutputContainer from './components/Outputs/OutputContainer';
 
 function App() {
-  let [records, setRecords] = useState([]);
+  const [records, setRecords] = useState([]);
+  const [id, setId] = useState(0);
 
   const saveDataHandler = data => {
+    setId(prevId => prevId + 1);
+    const newData = { key: id, ...data };
+
     setRecords(prevState => {
       const list = [...prevState];
-      list.unshift(data);
+      list.unshift(newData);
       return list;
     });
   };
