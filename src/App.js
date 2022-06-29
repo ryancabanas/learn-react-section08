@@ -11,8 +11,8 @@ function App() {
     setId(prevId => prevId + 1);
     const newData = { key: id, ...data };
 
-    setRecords(prevState => {
-      const list = [...prevState];
+    setRecords(prevRecords => {
+      const list = [...prevRecords];
       list.unshift(newData);
       return list;
     });
