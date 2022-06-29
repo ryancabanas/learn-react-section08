@@ -1,0 +1,16 @@
+button,
+.header {
+  background-color: purple;
+  color: white;
+}
+
+.button {
+  width: 100px;
+  float: right;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  background-color: white;
+}
