@@ -1,4 +1,5 @@
 import styles from './OutputContainer.module.css';
+import Record from './Record';
 
 const OutputContainer = props => {
   return (
@@ -7,7 +8,17 @@ const OutputContainer = props => {
         !props.recordCount && styles.hidden
       }`}
     >
-      This is the OutputContainer
+      <ul>
+        {props.records.map(record => {
+          return (
+            <Record
+              key={record.key}
+              username={record.username}
+              age={record.age}
+            />
+          );
+        })}
+      </ul>
     </div>
   );
 };

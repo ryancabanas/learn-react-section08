@@ -21,7 +21,7 @@ function App() {
   return (
     <div className='App'>
       <InputContainer onSave={saveDataHandler} />
-      <OutputContainer recordCount={records.length} />
+      <OutputContainer recordCount={records.length} records={records} />
     </div>
   );
 }

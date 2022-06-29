@@ -1,0 +1,16 @@
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+  padding-right: -30px;
+  /* margin-bottom: 5px; */
+}
+
+div .inner {
+  border-color: black;
+  border-style: solid;
+  padding: 4px;
+}
+
+div .outer {
+  padding: 5px;
+}
