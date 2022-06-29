@@ -16,15 +16,17 @@ const InputContainer = props => {
   const submitHandler = event => {
     event.preventDefault();
 
-    const savedData = {
-      username: username,
-      age: age
-    };
+    if (username && age) {
+      const savedData = {
+        username: username,
+        age: age
+      };
 
-    props.onSave(savedData);
+      props.onSave(savedData);
 
-    setUsername('');
-    setAge('');
+      setUsername('');
+      setAge('');
+    }
   };
 
   return (
